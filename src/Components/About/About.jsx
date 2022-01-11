@@ -6,7 +6,11 @@ const About = () => {
   let progress = [
     { progress: 95, heading: "React Js", color: "rgb(255 209 92)" },
     { progress: 90, heading: "Next Js", color: "rgb(255 76 96)" },
-    { progress: 95, heading: "UI / UX Design", color: "rgb(108 108 229)" },
+    {
+      progress: 95,
+      heading: "Front-End Development",
+      color: "rgb(108 108 229)",
+    },
   ];
   return (
     <section className={styles.main_section}>
@@ -31,7 +35,7 @@ const About = () => {
           </div>
           <div className={styles.about_progress_container}>
             {progress.map((val) => (
-              <>
+              <div key={val.heading}>
                 <div className={styles.progress_name}>
                   <p>{val.heading}</p> <p>{val.progress}%</p>
                 </div>
@@ -41,7 +45,7 @@ const About = () => {
                   trailWidth="1.5"
                   percent={val.progress}
                 />
-              </>
+              </div>
             ))}
           </div>
         </div>

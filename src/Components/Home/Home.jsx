@@ -30,7 +30,6 @@ const Home = () => {
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
   const HandleIconMovement = (event) => {
-    console.log(event);
     setX(-event.pageX * 0.03);
     setY(-event.pageY * 0.03);
   };
