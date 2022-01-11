@@ -19,7 +19,7 @@ const About = () => {
       </Fade>
       <div className={styles.container}>
         <div className={styles.img_container}>
-          <img src={require("../Home/Dp.jpg")} alt="dp" />
+          <img src={require("../../assets/Dp.jpg")} alt="dp" />
         </div>
         <div className={styles.about_container}>
           <div className={styles.about_cv_container}>

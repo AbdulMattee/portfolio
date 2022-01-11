@@ -38,7 +38,7 @@ const Home = () => {
       <Background x={x} y={y} />
       <main className={styles.container}>
         <div className={styles.img_container}>
-          <img src={require("./Dp.jpg")} alt="DP" />
+          <img src={require("../../assets/Dp.jpg")} alt="DP" />
         </div>
         <Fade bottom>
           <h1>Abdul Mattee</h1>

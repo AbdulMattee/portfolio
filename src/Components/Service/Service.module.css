@@ -10,17 +10,27 @@
   display: flex;
   justify-content: space-between;
   width: 98%;
+  flex-wrap: wrap;
 }
 .service {
   width: 25%;
   display: flex;
   flex-direction: column;
+  margin: 20px 0;
   border-radius: 10px;
   padding: 30px;
   transition: all 0.2s linear;
 }
 .service:hover {
   transform: translateY(-10px);
+}
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .img_container {
   width: 100px;
@@ -33,10 +43,7 @@
 .img_container img {
   width: 100%;
 }
-.description h3,
-p {
-  text-align: center;
-}
+
 .description p {
   font-size: 14px;
 }
