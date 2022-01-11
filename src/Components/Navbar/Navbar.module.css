@@ -1,0 +1,65 @@
+.main_section {
+  color: #fff;
+  background: #353353;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100vh;
+  min-height: 100vh;
+  top: 0;
+  width: 300px;
+  z-index: 1;
+  transform: translateX(0);
+  transition: all 0.3s ease-in-out;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 80%;
+  margin-top: 10%;
+  justify-content: space-between;
+}
+.my_name {
+  font-family: "Montserrat", Cambria, Cochin, Georgia, Times, "Times New Roman",
+    serif;
+  font-size: 35px;
+  margin: 10px 0;
+}
+.my_name::after {
+  content: ".";
+  color: #ff4c60;
+}
+.nav_list {
+  list-style: none;
+  padding-inline-start: 0;
+}
+.nav_item {
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  position: relative;
+  margin: 20px 0px;
+  transition: color 0.5s ease-in-out;
+  text-transform: capitalize;
+  font-family: "Rubik", sans-serif;
+}
+.nav_item:hover {
+  color: #ffd15c;
+}
+.nav_icon {
+  display: inline-block;
+  vertical-align: sub;
+  color: #ffd15c;
+  font-size: 22px;
+  stroke: #ffd15c;
+  font-weight: lighter;
+  margin-right: 10px;
+}
