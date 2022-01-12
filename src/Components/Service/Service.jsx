@@ -212,7 +212,7 @@ const Service = () => {
       </div>
       <p style={{ margin: "15px 0" }}>
         Looking for a custom job?{" "}
-        <a href="mailto:abdulmattee123@gmail.com" style={{ color: "white" }}>
+        <a href="mailto:abdullahqayyum878@gmail.com" style={{ color: "white" }}>
           Email me{" "}
         </a>
       </p>

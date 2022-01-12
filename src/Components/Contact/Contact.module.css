@@ -11,48 +11,40 @@
   justify-content: space-between;
   width: 98%;
 }
-.img_container {
-  width: 125px;
-  height: 125px;
-  border-radius: 50%;
-  overflow: hidden;
+.msg_div {
+  width: 35%;
+  /* background-attachment: fixed; */
+  background-repeat: no-repeat;
+  background-image: url(../../assets/contact/bg.png);
 }
-.img_container img {
-  width: 100%;
-}
-.about_container {
-  width: 75%;
+.form {
   display: flex;
-  background: #302f4e;
-  position: relative;
-  padding: 30px;
-  margin-bottom: 50px;
-  box-shadow: 0 5px 20px 0 rgb(69 67 96 / 10%);
-  border-radius: 20px;
+  flex-direction: column;
+  width: 60%;
 }
-
-.about_cv_container {
-  width: 50%;
+.form input,
+textarea {
+  border-radius: 30px;
+  padding: 20px 35px;
+  font-size: 16px;
+  outline: none;
+  margin: 10px 0;
+  color: #454360;
+  border: 0;
 }
-.about_progress_container {
-  width: 50%;
-}
-.about_cv_container p {
-  font-family: "Barlow", sans-serif;
-  font-style: italic;
-  font-size: 18px;
-}
-.progress_name {
+.name_subject_div {
   display: flex;
   justify-content: space-between;
-  font-family: "Montserrat", sans-serif;
+}
+.form .name_subject_div .name_subject {
+  width: 35%;
 }
 .btn_div {
   height: 70px;
   display: flex;
   align-items: center;
 }
-.cv_btn {
+.submit_btn {
   padding: 15px 35px;
   color: #fff !important;
   background: #ff4c60;
@@ -62,11 +54,11 @@
   font-size: 17px;
   font-weight: 700;
 }
-.cv_btn:focus {
+.submit_btn:focus {
   -webkit-animation: btn 250ms 1 ease-in-out;
   animation: btn 250ms 1 ease-in-out;
 }
-.cv_btn:active {
+.submit_btn:active {
   -webkit-animation: none;
   animation: none;
 }

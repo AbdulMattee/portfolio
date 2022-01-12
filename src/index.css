@@ -5,7 +5,7 @@ body {
   font-family: "Montserrat", "Lucida Sans", "Lucida Sans Regular",
     "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   color: white;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   background: #353353;
 }
 html {

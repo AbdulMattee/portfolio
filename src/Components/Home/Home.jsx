@@ -58,7 +58,17 @@ const Home = () => {
           ))}
         </div>
         <div className={styles.btn_div}>
-          <button className={styles.hire_btn}>Hire Me</button>
+          <button
+            className={styles.hire_btn}
+            onClick={() =>
+              window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: "smooth",
+              })
+            }
+          >
+            Hire Me
+          </button>
         </div>
       </main>
     </section>

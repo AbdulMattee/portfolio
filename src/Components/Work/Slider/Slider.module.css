@@ -1,0 +1,75 @@
+.main_section {
+  position: fixed;
+  background-image: linear-gradient(rgba(30, 30, 30, 0.9), #000 1810%);
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10000;
+  width: 100vw;
+  overflow: hidden;
+  min-height: -webkit-fill-available;
+  height: 100vh;
+  transition: all 0.3s;
+  user-select: none;
+}
+.close_div {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 98%;
+  color: white;
+  height: 7%;
+}
+.close_icon {
+  cursor: pointer;
+  fill: white !important;
+  font-size: 20px;
+  color: white !important ;
+}
+.slider_container {
+  display: flex;
+  justify-content: space-between;
+  width: 98%;
+  height: 92%;
+  align-items: center;
+}
+.prev_arrow,
+.next_arrow {
+  width: 35px;
+  height: 35px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(35, 35, 35, 0.65);
+}
+.image_div {
+  width: 90%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: 98vh;
+  text-align: center;
+  overflow-y: scroll;
+}
+.image_div::-webkit-scrollbar {
+  width: 5px;
+}
+.image_div .image_heading {
+  position: sticky;
+  background: rgba(35, 35, 35, 0.65);
+  top: 0;
+}
+.image_div img {
+  max-width: 100%;
+}
+.scroll_down {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  /* left: 47%; */
+}
