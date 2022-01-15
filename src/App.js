@@ -50,7 +50,7 @@ const App = () => {
     <>
       <Routes>
         <Route
-          path="/"
+          path="*"
           element={
             <>
               <ToastContainer autoClose={1500} />
