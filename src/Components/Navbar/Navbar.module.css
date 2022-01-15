@@ -42,12 +42,11 @@
   cursor: pointer;
   border: 0;
   outline: 0;
-  color: #fff;
   font-size: 16px;
   text-decoration: none;
   position: relative;
   margin: 20px 0px;
-  transition: color 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   text-transform: capitalize;
   font-family: "Rubik", sans-serif;
 }
@@ -62,4 +61,9 @@
   stroke: #ffd15c;
   font-weight: lighter;
   margin-right: 10px;
+}
+@media (max-width: 1100px) and (min-width: 1050px) {
+  .main_section {
+    width: 200px;
+  }
 }

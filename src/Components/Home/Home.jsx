@@ -1,32 +1,12 @@
 import React, { useState } from "react";
 import styles from "./Home.module.css";
 import Type from "./Type/Type.jsx";
+import { useMediaQuery } from "react-responsive";
 import { Fade } from "react-reveal";
-import {
-  BsLinkedin,
-  BsInstagram,
-  BsFacebook,
-  BsGithub,
-  BsWhatsapp,
-} from "react-icons/bs";
+import { contacts } from "../../Resources/HomeData";
 import Background from "./Background/Background";
 const Home = () => {
-  let contacts = [
-    { link: "https://github.com/AbdulMattee/", icon: <BsGithub /> },
-    {
-      link: "https://www.linkedin.com/in/abdul-mattee123",
-      icon: <BsLinkedin />,
-    },
-    { link: "https://www.instagram.com/mattee_xd/", icon: <BsInstagram /> },
-    {
-      link: "https://www.facebook.com/profile.php?id=100009095508375",
-      icon: <BsFacebook />,
-    },
-    {
-      link: "https://api.whatsapp.com/send?phone=923065401047",
-      icon: <BsWhatsapp />,
-    },
-  ];
+  const isTablet = useMediaQuery({ maxWidth: "768px" });
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
   const HandleIconMovement = (event) => {
@@ -35,7 +15,7 @@ const Home = () => {
   };
   return (
     <section className={styles.main_section} onMouseMove={HandleIconMovement}>
-      <Background x={x} y={y} />
+      {!isTablet && <Background x={x} y={y} />}
       <main className={styles.container}>
         <div className={styles.img_container}>
           <img src={require("../../assets/Dp.jpg")} alt="DP" />

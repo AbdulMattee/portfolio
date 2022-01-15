@@ -4,8 +4,11 @@ import { Fade } from "react-reveal";
 import emailjs from "emailjs-com";
 import { TailSpin } from "react-loader-spinner";
 import { toast } from "react-toastify";
+import { useMediaQuery } from "react-responsive";
 const Contact = () => {
   const [loader, setLoader] = useState(false);
+  const [button, setButton] = useState(true);
+  const isTabletorMobile = useMediaQuery({ maxWidth: "730px" });
   const [data, setData] = useState({
     name: "",
     subject: "",
@@ -14,12 +17,6 @@ const Contact = () => {
   });
   const SendMessage = async (event) => {
     event.preventDefault();
-    for (let i = 0; i < event.target.length - 1; i++) {
-      if (event.target[i].value === "") {
-        toast.error("All Fields are required!");
-        return;
-      }
-    }
     setLoader(true);
     try {
       await emailjs.send(
@@ -39,6 +36,14 @@ const Contact = () => {
     let _data = data;
     _data[event.target.name] = event.target.value;
     setData(_data);
+    let check = false;
+    Object.keys(data).map((val) => {
+      if (data[val] === "") {
+        check = true;
+        return false;
+      }
+    });
+    setButton(check);
   };
   return (
     <section className={styles.main_section}>
@@ -71,22 +76,41 @@ const Contact = () => {
           </p>
         </div>
         <form className={styles.form} onSubmit={SendMessage}>
-          <div className={styles.name_subject_div}>
-            <input
-              onChange={HandleInput}
-              type="text"
-              name="name"
-              className={styles.name_subject}
-              placeholder="Name"
-            />
-            <input
-              onChange={HandleInput}
-              type="text"
-              name="subject"
-              className={styles.name_subject}
-              placeholder="Subject"
-            />
-          </div>
+          {isTabletorMobile ? (
+            <>
+              <input
+                onChange={HandleInput}
+                type="text"
+                name="name"
+                className={styles.name_subject}
+                placeholder="Name"
+              />
+              <input
+                onChange={HandleInput}
+                type="text"
+                name="subject"
+                className={styles.name_subject}
+                placeholder="Subject"
+              />
+            </>
+          ) : (
+            <div className={styles.name_subject_div}>
+              <input
+                onChange={HandleInput}
+                type="text"
+                name="name"
+                className={styles.name_subject}
+                placeholder="Name"
+              />
+              <input
+                onChange={HandleInput}
+                type="text"
+                name="subject"
+                className={styles.name_subject}
+                placeholder="Subject"
+              />
+            </div>
+          )}
           <input
             onChange={HandleInput}
             type="email"
@@ -102,9 +126,11 @@ const Contact = () => {
           <div className={styles.btn_div}>
             {!loader ? (
               <input
+                style={{ opacity: button ? 0.5 : 1 }}
                 type="submit"
                 value={"Send a message"}
                 className={styles.submit_btn}
+                disabled={button}
               />
             ) : (
               <TailSpin

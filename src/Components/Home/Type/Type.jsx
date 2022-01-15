@@ -1,12 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Typist from "react-typist";
+import { sentences } from "../../../Resources/HomeData";
 const Type = () => {
-  let sentences = [
-    " a Front-End Developer.",
-    " a ReactJs Developer.",
-    " a NextJs Developer.",
-    // "",
-  ];
   let [index, setIndex] = useState(0);
   const [display, setDisplay] = useState(false);
   const HandleIndex = () => {

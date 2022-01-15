@@ -1,5 +1,7 @@
 .main_section {
   margin-left: 300px;
+  display: flex;
+  flex-direction: column;
 }
 .main_section h1 {
   margin-top: 100px;
@@ -23,6 +25,7 @@
 .about_container {
   width: 75%;
   display: flex;
+  justify-content: space-between;
   background: #302f4e;
   position: relative;
   padding: 30px;
@@ -79,5 +82,61 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+@media (max-width: 1100px) and (min-width: 1050px) {
+  .main_section {
+    margin-left: 200px;
+  }
+}
+@media (max-width: 1049px) {
+  .main_section {
+    width: 100vw;
+    margin-left: 0;
+  }
+  .main_section h1 {
+    margin-left: 20px;
+  }
+  .container {
+    align-self: center;
+  }
+  .about_cv_container {
+    width: 45%;
+  }
+}
+@media (max-width: 768px) {
+  .about_progress_container p,
+  .about_cv_container p,
+  button {
+    font-size: 15px !important;
+  }
+  .img_container {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media (max-width: 650px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .about_container {
+    width: 90%;
+    margin: 20px 0;
+  }
+  .about_progress_container p,
+  .about_cv_container p,
+  button {
+    font-size: 14px !important;
+  }
+}
+@media (max-width: 500px) {
+  .about_container {
+    flex-direction: column;
+  }
+  .about_cv_container,
+  .about_progress_container {
+    width: 95%;
   }
 }

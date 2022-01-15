@@ -26,7 +26,6 @@ const Background = ({ x, y }) => {
           top: "10%",
           color: "#FF4C60",
           transform: `translate(${x}px,${y}px)`,
-          //   transform: "rotate(30deg)",
         }}
       />
       <BsCircle
@@ -51,7 +50,6 @@ const Background = ({ x, y }) => {
           top: "10%",
           color: "#6C6CE5",
           transform: `translate(${x}px,${y}px)`,
-          //   transform: "rotate(90deg)",
         }}
       />
       <BsSquare
@@ -68,7 +66,6 @@ const Background = ({ x, y }) => {
           top: " 20%",
           color: "#FFD15C",
           transform: `translate(${x}px,${y}px)`,
-          //   transform: "rotate(180deg)",
         }}
       />
       <BsSlashLg
@@ -77,7 +74,6 @@ const Background = ({ x, y }) => {
           bottom: "20%",
           color: "#6C6CE5",
           transform: `translate(${x}px,${y}px)`,
-          //   transform: "rotate(90deg)",
         }}
       />
       <BsCircle

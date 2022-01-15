@@ -1,5 +1,7 @@
 .main_section {
   margin-left: 300px;
+  display: flex;
+  flex-direction: column;
 }
 .main_section h1 {
   margin-top: 100px;
@@ -71,5 +73,48 @@ textarea {
   }
   100% {
     transform: scale(1);
+  }
+}
+@media (max-width: 1100px) and (min-width: 1050px) {
+  .main_section {
+    margin-left: 200px;
+  }
+}
+@media (max-width: 1050px) {
+  .main_section {
+    width: 100vw;
+    margin-left: 0;
+  }
+  .main_section h1 {
+    margin-left: 20px;
+  }
+  .container {
+    align-self: center;
+    width: 95%;
+  }
+}
+@media (max-width: 880px) {
+  .form {
+    width: 65%;
+  }
+  .form .name_subject_div .name_subject {
+    width: 33%;
+  }
+}
+@media (max-width: 730px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .form,
+  .msg_div {
+    width: 97%;
+  }
+}
+@media (max-width: 465px) {
+  .form input,
+  textarea {
+    font-size: 13px;
+    padding: 17px 20px;
   }
 }

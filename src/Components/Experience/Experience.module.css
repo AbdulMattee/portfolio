@@ -1,5 +1,7 @@
 .main_section {
   margin-left: 300px;
+  display: flex;
+  flex-direction: column;
 }
 .main_section h1 {
   margin-top: 100px;
@@ -59,4 +61,48 @@
   top: 30px;
   bottom: 30px;
   left: 42px;
+}
+@media (max-width: 1100px) and (min-width: 1050px) {
+  .main_section {
+    margin-left: 200px;
+  }
+}
+@media (max-width: 1050px) {
+  .main_section {
+    width: 100vw;
+    margin-left: 0;
+  }
+  .main_section h1 {
+    margin-left: 20px;
+  }
+  .container {
+    align-self: center;
+  }
+}
+@media (max-width: 768px) {
+  .record p,
+  .record2 p {
+    font-size: 13px;
+  }
+  .record h3,
+  .record2 h3 {
+    font-size: 14px;
+  }
+}
+@media (max-width: 620px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .programming_record,
+  .academic_record {
+    width: 70% !important;
+  }
+  .line {
+    left: 30px;
+  }
+  .record::after,
+  .record2::after {
+    left: -11px;
+  }
 }

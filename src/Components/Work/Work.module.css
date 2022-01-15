@@ -1,5 +1,7 @@
 .main_section {
   margin-left: 300px;
+  display: flex;
+  flex-direction: column;
 }
 .main_section h1 {
   margin-top: 100px;
@@ -9,32 +11,36 @@
 
 .container {
   display: flex;
-  justify-content: space-between;
-  width: 80%;
   flex-wrap: wrap;
+  width: 100%;
 }
 .item {
   position: relative;
   cursor: pointer;
+  margin: 20px 10px;
+  width: 30%;
 }
 .main_item {
-  width: 280px;
-  padding: 30px;
+  width: 100%;
   background: white;
+
   border-radius: 20px;
   color: black;
   display: flex;
   align-items: center;
   font-size: 30px;
   justify-content: center;
-  height: 180px;
+  height: 220px;
+  position: relative;
 }
 .link_div {
   transition: all 0.3s ease-in-out;
   position: absolute;
   width: 100%;
+
   height: 100%;
   background: #7b7be8e6;
+  color: white;
   top: 0;
   border-radius: 20px;
   display: flex;
@@ -73,4 +79,40 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 1100px) and (min-width: 1050px) {
+  .main_section {
+    margin-left: 200px;
+  }
+}
+@media (max-width: 1050px) {
+  .main_section {
+    width: 100vw;
+    margin-left: 0;
+  }
+  .main_section h1 {
+    margin-left: 20px;
+  }
+  .container {
+    align-self: center;
+  }
+}
+@media (max-width: 768px) and (min-width: 451px) {
+  .container {
+    justify-content: center;
+  }
+  .item {
+    width: 45%;
+  }
+}
+@media (max-width: 450px) {
+  .container {
+    justify-content: center;
+  }
+  .item {
+    width: 90%;
+  }
+  .close_div {
+    width: 95%;
+  }
 }
